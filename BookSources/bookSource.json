@@ -1,0 +1,245 @@
+[
+  {
+    "bookSourceName": "www.biquge345.com【笔趣阁345】",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.biquge345.com/",
+    "concurrentRate": "1/1000",
+    "customOrder": 0,
+    "enabled": false,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "header": "{\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36\"}",
+    "lastUpdateTime": 1741239033198,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "span.x1>a@text",
+      "coverUrl": "div.zhutu>img@src",
+      "intro": "div.x3@text",
+      "kind": "span.x1@text",
+      "lastChapter": "span.x2>a@text",
+      "name": "div.right_border>h1@text"
+    },
+    "ruleContent": {
+      "content": "#txt@textNodes",
+      "replaceRegex": "##(&?\\w+;|\\(本章完\\)|\\?.*最新章节.*完整章节』|\\(\\))##"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": "span.zuo>a@text",
+      "bookList": "ul.search>li:not(li.fen)",
+      "bookUrl": "span.name>a@href",
+      "checkKeyWord": "秦始皇获得大学生召唤系统后",
+      "coverUrl": "",
+      "kind": "span.lei>a@text&&span.time@text##(\\[|\\])##",
+      "lastChapter": "span.jie>a@text",
+      "name": "span.name>a@text"
+    },
+    "ruleToc": {
+      "chapterList": "ul.info>li",
+      "chapterName": "a@text",
+      "chapterUrl": "a@href"
+    },
+    "searchUrl": "<js>cookie.removeCookie(baseUrl)</js>\n/s.php, {\n \"method\": \"POST\",\n \"body\": \"type=articlename&s={{key}}&submit=\",\n \"headers\": {\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36\"}\n}",
+    "weight": 0
+  },
+  {
+    "bookSourceGroup": "",
+    "bookSourceName": "www.fd80s.com【笔趣阁】",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.fd80s.com/",
+    "customOrder": 0,
+    "enabled": false,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "header": "{\"user-agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0\"}",
+    "lastUpdateTime": 1741239098587,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "div.book@div.bookinfo@div.bookdes@p.0@a@text",
+      "coverUrl": "div.book@a.cover@img@src",
+      "intro": "div.bookintro@p@html##.*小说简介：",
+      "kind": "div.book@div.bookinfo@div.bookdes@p.1@text",
+      "lastChapter": "div.book@div.bookinfo@div.bookdes@p.2@a@text",
+      "name": "div.book@div.booktitle@h1@text",
+      "tocUrl": "div.bookbtn@a.1@href",
+      "wordCount": "div.book@div.bookinfo@div.bookdes@p.1@text"
+    },
+    "ruleContent": {
+      "content": "div#chaptercontent@html",
+      "nextContentUrl": "",
+      "title": "div.booktitle@h1@text"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": "dd.1@a@text",
+      "bookList": "div.container@div.content.pc-pl.pc-pr@dl",
+      "bookUrl": "dt@a@href",
+      "checkKeyWord": "天可汗(校对版)",
+      "coverUrl": "a@img.lazy@src",
+      "intro": "dd.0@text",
+      "kind": "dd.1@span.2@text",
+      "lastChapter": "",
+      "name": "dt@a@text",
+      "wordCount": "dd.1@span.1@text"
+    },
+    "ruleToc": {
+      "chapterList": "div.chapterlist@div.all@ul@li",
+      "chapterName": "a@text",
+      "chapterUrl": "a@onclick##location\\.href=\\'|\\'$",
+      "nextTocUrl": "div.listpage@span.2@a@href"
+    },
+    "searchUrl": "https://www.fd80s.com/search,{\n\"body\":\"searchkey={{key}}\",\n\"method\":\"POST\",\n\"webView\":true\n}",
+    "weight": 0
+  },
+  {
+    "bookSourceGroup": "",
+    "bookSourceName": "m.ddtxt8.cc【顶点小说】",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://m.ddtxt8.cc/",
+    "customOrder": 0,
+    "enabled": false,
+    "enabledCookieJar": true,
+    "enabledExplore": false,
+    "header": "{\"user-agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0\"}",
+    "lastUpdateTime": 1741239103112,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "div.book_box@dl@dd.0@span.0@text",
+      "coverUrl": "div.book_info@div.cover@img@src",
+      "init": "",
+      "intro": "div.book_about@dl@dd@text",
+      "kind": "div.book_box@dl@dd.0@span.1@text",
+      "lastChapter": "",
+      "name": "div.book_box@dl@dt.name@text",
+      "tocUrl": "div.book_more@a@href",
+      "wordCount": "div.book_box@dl@dd.1@span.1@text"
+    },
+    "ruleContent": {
+      "content": "div#chaptercontent@html##请收藏：https.*|（温馨提示：请关闭畅读.*",
+      "nextContentUrl": "a#pb_next@href",
+      "title": ""
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": "dl@dt@span@text",
+      "bookList": "div.block.so_list@div.hot@div.item",
+      "bookUrl": "dl@dt@a@href",
+      "checkKeyWord": "风起龙城",
+      "coverUrl": "div@image@a@@img@src",
+      "intro": "dl@dd@text",
+      "kind": "",
+      "lastChapter": "",
+      "name": "dl@dt@a@text",
+      "wordCount": ""
+    },
+    "ruleToc": {
+      "chapterList": "class.book_last.0@tag.dd[!0]@tag.a.0",
+      "chapterName": "a@text",
+      "chapterUrl": "a@href",
+      "nextTocUrl": ""
+    },
+    "searchUrl": "https://m.ddtxt8.cc/s?q={{key}},{\"webView\":true}",
+    "weight": 0
+  },
+  {
+    "bookSourceGroup": "",
+    "bookSourceName": "m.bq05.cc【顶点小说】",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://m.bq05.cc",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": false,
+    "header": "{\"user-agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0\"}",
+    "lastUpdateTime": 1741239108252,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "//meta[@property='og:novel:author']/@content",
+      "coverUrl": "//meta[@property='og:image']/@content",
+      "intro": "//meta[@property='og:description']/@content",
+      "kind": "//meta[@property='og:novel:category' or @property='og:novel:status' or @property='og:novel:update_time']/@content",
+      "lastChapter": "//meta[@property='og:novel:latest_chapter_name']/@content",
+      "name": "//meta[@property='og:novel:book_name']/@content",
+      "tocUrl": "class.book_more.0@tag.a.0@href",
+      "wordCount": "class.dd_box.1@tag.span.1@text##字数："
+    },
+    "ruleContent": {
+      "content": "id.chaptercontent.0@textNodes##请收藏：https.*",
+      "nextContentUrl": "id.pb_next.0@href@js:if(result && /\\/\\d+_\\d\\.html$/.test(result[0])){result=result[0];}else{result='';};result;",
+      "title": ""
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": "tag.span.0@text",
+      "bookList": "class.item",
+      "bookUrl": "tag.a.0@href",
+      "checkKeyWord": "风起龙城",
+      "coverUrl": "tag.img.0@src",
+      "intro": "tag.dd.0@text",
+      "kind": "",
+      "lastChapter": "",
+      "name": "tag.a.1@text",
+      "wordCount": ""
+    },
+    "ruleToc": {
+      "chapterList": "class.book_last.0@tag.dd[!0]@tag.a.0",
+      "chapterName": "text",
+      "chapterUrl": "href",
+      "nextTocUrl": ""
+    },
+    "searchUrl": "/s?q={{key}},{'webView':true}",
+    "weight": 0
+  },
+  {
+    "bookSourceComment": "",
+    "bookSourceGroup": "",
+    "bookSourceName": "www.mayiwsk.com【蚂蚁文学】",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.mayiwsk.com/",
+    "bookUrlPattern": "",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": false,
+    "enabledExplore": false,
+    "header": "{\"user-agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0\"}",
+    "lastUpdateTime": 1742207959067,
+    "respondTime": 7156,
+    "ruleBookInfo": {
+      "author": "div#maininfo@div#info@p.0@text",
+      "coverUrl": "div#sidebar@div#fmimg@img@src",
+      "intro": "div#maininfo@div#intro@p@text",
+      "kind": "div#maininfo@div#info@p.2@text",
+      "lastChapter": "div#maininfo@div#info@p.3@a@text",
+      "name": "div#maininfo@div#info@h1@text",
+      "tocUrl": ""
+    },
+    "ruleContent": {
+      "content": "div#content@html",
+      "replaceRegex": "##最新网址：.*| +[^ ]+小说5200| +[^ ]+贴吧| +[^ ]+\\《\\》|\\{宜搜小说.*",
+      "title": "div.bookname@h1@text"
+    },
+    "ruleExplore": {
+      "coverUrl": "",
+      "name": ""
+    },
+    "ruleSearch": {
+      "author": "td.odd.1@text",
+      "bookList": "div#main@div#content@table.grid@tbody.0@tr#nr",
+      "bookUrl": "td.odd.0@a@href",
+      "checkKeyWord": "皇兄何故造反",
+      "coverUrl": "a.0@href##.+\\D((\\d+)\\d{3})\\D##/files/article/image/$2/$1/$1s.jpg###",
+      "intro": "",
+      "kind": "td.5:4@text",
+      "lastChapter": "td.even@a@text",
+      "name": "td.odd.0@text",
+      "wordCount": "td.3@text"
+    },
+    "ruleToc": {
+      "chapterList": "div.box_con@div#list@dl.0@dt:nth-of-type(2)~dd@a",
+      "chapterName": "@text",
+      "chapterUrl": "@href"
+    },
+    "searchUrl": "https://www.mayiwsk.com/modules/article/search.php,{\n\"method\":\"post\",\n\"body\":\"searchkey={{key}}&searchtype=articlename\"\n}",
+    "weight": 0
+  }
+]
