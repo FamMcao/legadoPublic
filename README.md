@@ -8,7 +8,7 @@
 ### 书源合集地址
 
 
-[bookSourcesMain](/legado/BookSources/bookSource.json)
+[bookSourcesMain](/BookSources/bookSource.json)
 
 ### 单个书源地址
 
