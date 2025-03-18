@@ -1,20 +1,12 @@
-# legadoPublic
+# legadoPublic 书源共享仓库 
 
-## 项目结构
-
+legado3.X阅读器自用书源仓库
 
 ## 书源地址
 
 ### 书源合集地址
-
-
-[bookSourcesMain](/BookSources/bookSource.json)
+[/BookSources/bookSource.json](/BookSources/bookSource.json)
 
 ### 单个书源地址
+笔趣阁345 [/BookSources/each/www.biquge345.json](/BookSources/each/www.biquge345.json)
 
-> 需要将 ***${fileName}*** 替换为 **each** 文件夹下书源文件名称
-
-``` sh
-https://raw.githubusercontent.com/FamMcao/legadoPublic/refs/heads/main/BookSources/each/${fileName}.json
-```
-### TestInformation
