@@ -2,175 +2,194 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>legadoPublic 书源仓库</title>
+    <title>Legado 书源仓库</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+        :root { --primary-color: #2c3e50; }
+        body { 
+            font-family: "Segoe UI", sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
+        
+        /* 头部样式 */
+        header { 
+            display: flex; 
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 20px;
         }
-        header img {
-            max-width: 100px;
-            border-radius: 50%;
-            border: 2px solid white;
-        }
-        h1, h2 {
-            margin: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .logo { 
+            width: 60px; 
+            height: 60px;
             border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .book-source-list {
-            margin-top: 20px;
+        .header-text h1 {
+            margin: 0;
+            font-size: 1.8em;
+            color: var(--primary-color);
         }
-        .book-source-item {
-            margin-bottom: 15px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f1f1f1;
+        .header-text p {
+            margin: 0;
+            color: #666;
+            font-size: 0.95em;
         }
-        .search-box {
-            margin-bottom: 20px;
-        }
-        .search-box input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .copy-btn {
-            cursor: pointer;
-            color: #4CAF50;
-            font-weight: bold;
-            margin-left: 10px;
-            border: none;
+
+        /* 通用样式 */
+        .copy-btn { 
+            cursor: pointer; 
+            color: #2980b9; 
+            margin-left: 10px; 
+            font-size: 0.9em; 
             background: none;
-            padding: 0;
+            border: none;
+            padding: 2px 5px;
         }
-        .copy-success {
-            color: green;
+        .search-box { 
+            width: 100%; 
+            padding: 10px; 
+            margin: 20px 0; 
+            border: 1px solid #ddd; 
+            border-radius: 4px;
+        }
+        .source-item { 
+            padding: 15px; 
+            border-bottom: 1px solid #eee; 
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .source-item:hover { background: #f9f9f9; }
+        .json-link { 
+            color: var(--primary-color); 
+            text-decoration: none;
+            min-width: 150px;
+        }
+        .json-link:hover { text-decoration: underline; }
+        .site-link {
+            color: #666;
+            text-decoration: none;
             font-size: 0.9em;
-            margin-left: 10px;
-            display: none;
+        }
+        .site-link:hover { color: #2980b9; }
+
+        /* 移动端适配 */
+        @media (max-width: 480px) {
+            header { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .logo { width: 50px; height: 50px; }
+            .header-text h1 { font-size: 1.5em; }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="https://fammcao.github.io/legadoPublic/src/imgs/logo.jpg" alt="网站Logo">
-        <h1>legadoPublic 书源仓库</h1>
+        <img src="/src/imgs/logo.jpg" class="logo" alt="网站logo">
+        <div class="header-text">
+            <h1>Legado 自用书源仓库</h1>
+            <p>Legado 3.X 阅读器专用书源集合，持续更新维护</p>
+        </div>
     </header>
-    <div class="container">
-        <h2>项目介绍</h2>
-        <p>legado3.X阅读器自用书源仓库</p>
 
-        <h2>使用方法</h2>
+    <section>
+        <h2>📚 使用方法</h2>
         <ul>
-            <li>方法一：将书源合集导入规则订阅定期刷新</li>
-            <li>方法二：将书源json文件的url链接复制,在阅读app中使用url添加书源</li>
+            <li>方法一：将书源合集链接添加为规则订阅</li>
+            <li>方法二：复制单个书源链接到阅读APP添加</li>
         </ul>
+    </section>
 
-        <h2>书源合集</h2>
-        <p>
-            合集链接：<a href="https://fammcao.github.io/legadoPublic/BookSources/bookSource.json" target="_blank">https://fammcao.github.io/legadoPublic/BookSources/bookSource.json</a>
-            <button class="copy-btn" onclick="copyToClipboard('https://fammcao.github.io/legadoPublic/BookSources/bookSource.json', this)">一键复制</button>
-            <span class="copy-success" id="collectionCopySuccess">已复制！</span>
-        </p>
+    <section>
+        <h2>📦 书源合集</h2>
+        <div id="main-source">
+            <a href="https://fammcao.github.io/legadoPublic/BookSources/BookSource.json" 
+               class="json-link"
+               target="_blank">
+               https://fammcao.github.io/legadoPublic/BookSources/BookSource.json
+            </a>
+            <button onclick="copyUrl('https://fammcao.github.io/legadoPublic/BookSources/BookSource.json')" 
+                    class="copy-btn">复制链接</button>
+        </div>
+    </section>
 
-        <h2>单个书源</h2>
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="使用书源中文名或资源网站地址进行搜索">
-        </div>
-        <div class="book-source-list" id="bookSourceList">
-            <!-- 书源列表将由 JavaScript 动态生成 -->
-        </div>
-    </div>
+    <section>
+        <h2>🔍 单个书源列表</h2>
+        <input type="text" id="searchInput" class="search-box" placeholder="输入书源名称或网址搜索...">
+        <div id="sourceList"></div>
+    </section>
 
     <script>
-        // 示例书源数据（实际应通过后端或静态文件提供完整数据）
-        const bookSources = [
-            {
-                "bookSourceName": "【测试书源1】测试描述",
-                "bookSourceUrl": "https://www.example1.com",
-                "fileName": "www.biquge345.com.json"
-            },
-            {
-                "bookSourceName": "【测试书源2】另一个描述",
-                "bookSourceUrl": "https://www.example2.com",
-                "fileName": "anotherSource.json"
-            }
-        ];
-
-        const baseUrl = "https://api.github.com/repos/FamMcao/legadoPublic/contents/BookSources/each/";
-
-        // 生成书源列表
-        function renderBookSourceList(searchQuery = "") {
-            const listContainer = document.getElementById("bookSourceList");
-            listContainer.innerHTML = ""; // 清空内容
-
-            const filteredSources = bookSources.filter(source => 
-                source.bookSourceName.includes(searchQuery) || 
-                source.fileName.includes(searchQuery)
-            );
-
-            filteredSources.forEach((source, index) => {
-                const item = document.createElement("div");
-                item.className = "book-source-item";
-
-                const name = source.bookSourceName.match(/【(.*?)】/)?.[1] || "未知书源";
-                const fileUrl = baseUrl + source.fileName;
-
-                const copySuccessId = `copySuccess${index}`;
-
-                item.innerHTML = `
-                    <p><strong>书源中文名：</strong>${name}</p>
-                    <p><strong>书源文件名：</strong><a href="${fileUrl}" target="_blank">${source.fileName}</a>
-                    <button class="copy-btn" onclick="copyToClipboard('${fileUrl}', this, '${copySuccessId}')">一键复制</button>
-                    <span class="copy-success" id="${copySuccessId}">已复制！</span>
-                    </p>
-                    <p><strong>书源目标网站链接：</strong><a href="${source.bookSourceUrl}" target="_blank">${source.bookSourceUrl}</a></p>
-                `;
-                listContainer.appendChild(item);
-            });
+        // 提取中文名函数
+        function extractChineseName(text) {
+            const match = text.match(/【(.*?)】/);
+            return match ? match[1] : text;
         }
 
-        // 搜索功能
-        document.getElementById("searchInput").addEventListener("input", (e) => {
-            renderBookSourceList(e.target.value);
+        // 自动加载书源列表
+        window.onload = async () => {
+            try {
+                const response = await fetch('https://api.github.com/repos/FamMcao/legadoPublic/contents/BookSources/each');
+                const files = await response.json();
+                
+                let html = '';
+                for (const file of files) {
+                    if (file.name.endsWith('.json')) {
+                        const jsonUrl = `https://fammcao.github.io/legadoPublic/BookSources/each/${file.name}`;
+                        const res = await fetch(jsonUrl);
+                        const data = await res.json();
+                        
+                        // 处理数据
+                        const chineseName = extractChineseName(data.bookSourceName);
+                        const siteUrl = data.bookSourceUrl.startsWith('http') 
+                            ? data.bookSourceUrl 
+                            : `http://${data.bookSourceUrl}`;
+
+                        html += `
+                            <div class="source-item">
+                                <a href="${jsonUrl}" class="json-link" target="_blank">${chineseName}</a>
+                                <a href="${siteUrl}" class="site-link" target="_blank">${data.bookSourceUrl}</a>
+                                <div style="margin-left: auto;">
+                                    <button onclick="copyUrl('${jsonUrl}')" class="copy-btn">复制书源</button>
+                                    <button onclick="copyUrl('${siteUrl}')" class="copy-btn">复制网址</button>
+                                </div>
+                            </div>
+                        `;
+                    }
+                }
+                document.getElementById('sourceList').innerHTML = html;
+            } catch (error) {
+                console.error('加载书源失败:', error);
+                document.getElementById('sourceList').innerHTML = '<div style="color:red">书源加载失败，请刷新重试</div>';
+            }
+        };
+
+        // 搜索功能（带防抖）
+        let searchTimer;
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            clearTimeout(searchTimer);
+            searchTimer = setTimeout(() => {
+                const query = e.target.value.toLowerCase();
+                document.querySelectorAll('.source-item').forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    item.style.display = text.includes(query) ? 'flex' : 'none';
+                });
+            }, 300);
         });
 
-        // 初始渲染
-        renderBookSourceList();
-
-        // 一键复制功能
-        function copyToClipboard(text, button, successId) {
-            navigator.clipboard.writeText(text).then(() => {
-                const successElement = document.getElementById(successId);
-                if (successElement) {
-                    successElement.style.display = 'inline';
-                    setTimeout(() => {
-                        successElement.style.display = 'none';
-                    }, 2000);
-                }
-            }).catch(err => {
-                console.error("复制失败：", err);
-            });
+        // 改进版复制函数
+        function copyUrl(text) {
+            navigator.clipboard.writeText(text)
+                .then(() => alert('已复制到剪贴板'))
+                .catch(() => {
+                    const textarea = document.createElement('textarea');
+                    textarea.value = text;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                    alert('已手动复制到剪贴板');
+                });
         }
     </script>
 </body>
