@@ -1,0 +1,54 @@
+[
+    {
+        "bookSourceGroup": "",
+        "bookSourceName": "9ed.qu04.cc【顶点小说】",
+        "bookSourceType": 0,
+        "bookSourceUrl": "https://9ed.qu04.cc/",
+        "customOrder": 0,
+        "enabled": false,
+        "enabledCookieJar": true,
+        "enabledExplore": false,
+        "header": "{\"user-agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0\"}",
+        "lastUpdateTime": 1741239103112,
+        "respondTime": 180000,
+        "ruleBookInfo": {
+            "author": "div.book_box@dl@dd.0@span.0@text",
+            "coverUrl": "div.book_info@div.cover@img@src",
+            "init": "",
+            "intro": "div.book_about@dl@dd@text",
+            "kind": "div.book_box@dl@dd.0@span.1@text",
+            "lastChapter": "",
+            "name": "div.book_box@dl@dt.name@text",
+            "tocUrl": "div.book_more@a@href",
+            "wordCount": "div.book_box@dl@dd.1@span.1@text"
+        },
+        "ruleContent": {
+            "content": "div#chaptercontent@html##请收藏：https.*|（温馨提示：请关闭畅读.*",
+            "nextContentUrl": "a#pb_next@href@js:if(result && /\\/\\d+_\\d\\.html$/.test(result[0])){result=result[0];}else{result='';};result;",
+            "title": ""
+        },
+        "ruleExplore": {},
+        "ruleSearch": {
+            "author": "dl@dt@span@text",
+            "bookList": "div.block.so_list@div.hot@div.item",
+            "bookUrl": "dl@dt@a@href",
+            "checkKeyWord": "轮回乐园",
+            "coverUrl": "div@image@a@@img@src",
+            "intro": "dl@dd@text",
+            "kind": "",
+            "lastChapter": "",
+            "name": "dl@dt@a@text",
+            "wordCount": ""
+        },
+        "ruleToc": {
+            "chapterList": "class.book_last.0@tag.dl@tag.dd[!0]",
+            "chapterName": "a@text",
+            "chapterUrl": "a@href",
+            "nextTocUrl": "",
+            "preUpdateJs": ""
+        },
+        "searchUrl": "/s?q={{key}},{\"webView\":true}",
+        "weight": 0,
+        "bookSourceComment": "同站：m.ddtxt8.cc"
+    }
+]
