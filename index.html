@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>legadoPublic 书源仓库</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .source-list {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .source-item {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            transition: all 0.2s;
+        }
+
+        .source-item:hover {
+            transform: translateX(5px);
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        code {
+            background-color: #f3f3f3;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>legadoPublic 书源仓库</h1>
+        <p>Legado 3.X 阅读器自用书源仓库</p>
+    </header>
+
+    <div class="section">
+        <h2>📚 使用方法</h2>
+        <ul>
+            <li>方法一：将书源合集导入规则订阅定期刷新</li>
+            <li>方法二：复制书源JSON文件的URL链接，在阅读APP中使用URL添加书源</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📦 书源合集</h2>
+        <p>
+            <a href="/BookSources/BookSources.json" target="_blank">BookSources.json</a>
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>🔍 单个书源搜索</h2>
+        <input type="text" 
+               class="search-box" 
+               placeholder="输入书源名称或URL进行过滤..."
+               id="searchInput">
+
+        <div class="source-list" id="sourceList">
+            <!-- 动态加载书源列表 -->
+            <div class="loading">正在加载书源列表...</div>
+        </div>
+    </div>
+
+    <script>
+        // GitHub API 获取 each 目录文件列表
+        const loadSources = async () => {
+            try {
+                const response = await fetch('https://api.github.com/repos/FamMcao/legadoPublic/contents/BookSources/each');
+                const files = await response.json();
+                
+                const listContainer = document.getElementById('sourceList');
+                listContainer.innerHTML = ''; // 清空加载状态
+
+                files.forEach(file => {
+                    if (file.name.endsWith('.json')) {
+                        const item = document.createElement('div');
+                        item.className = 'source-item';
+                        item.innerHTML = `
+                            <a href="${file.html_url.replace('/FamMcao/legadoPublic/', '/FamMcao/legadoPublic/main/')}" 
+                               target="_blank">
+                                ${file.name.replace('.json', '')}
+                            </a>
+                        `;
+                        item.dataset.search = file.name.toLowerCase();
+                        listContainer.appendChild(item);
+                    }
+                });
+
+                // 初始化搜索功能
+                document.getElementById('searchInput').addEventListener('input', function(e) {
+                    const searchTerm = e.target.value.toLowerCase();
+                    Array.from(listContainer.children).forEach(item => {
+                        const match = item.dataset.search.includes(searchTerm);
+                        item.style.display = match ? 'block' : 'none';
+                    });
+                });
+
+            } catch (error) {
+                document.getElementById('sourceList').innerHTML = 
+                    '<div class="error">⚠️ 书源加载失败，请刷新重试或检查网络连接</div>';
+            }
+        }
+
+        // 页面加载完成后执行
+        window.addEventListener('DOMContentLoaded', loadSources);
+    </script>
+</body>
+</html>
