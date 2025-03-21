@@ -95,54 +95,54 @@
       "weight": 0
   },
   {
-      "bookSourceGroup": "",
-      "bookSourceName": "www.fd80s.com【笔趣阁】",
-      "bookSourceType": 0,
-      "bookSourceUrl": "https://www.fd80s.com/",
-      "customOrder": 0,
-      "enabled": true,
-      "enabledCookieJar": true,
-      "enabledExplore": true,
-      "header": "{\"user-agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0\"}",
-      "lastUpdateTime": 1741239098587,
-      "respondTime": 180000,
-      "ruleBookInfo": {
-          "author": "div.book@div.bookinfo@div.bookdes@p.0@a@text",
-          "coverUrl": "div.book@a.cover@img@src",
-          "intro": "div.bookintro@p@html##.*小说简介：",
-          "kind": "div.book@div.bookinfo@div.bookdes@p.1@text",
-          "lastChapter": "div.book@div.bookinfo@div.bookdes@p.2@a@text",
-          "name": "div.book@div.booktitle@h1@text",
-          "tocUrl": "div.bookbtn@a.1@href",
-          "wordCount": "div.book@div.bookinfo@div.bookdes@p.1@text"
-      },
-      "ruleContent": {
-          "content": "div#chaptercontent@html",
-          "nextContentUrl": "",
-          "title": "div.booktitle@h1@text"
-      },
-      "ruleExplore": {},
-      "ruleSearch": {
-          "author": "dd.1@a@text",
-          "bookList": "div.container@div.content.pc-pl.pc-pr@dl",
-          "bookUrl": "dt@a@href",
-          "checkKeyWord": "天可汗",
-          "coverUrl": "a@img.lazy@src",
-          "intro": "dd.0@text",
-          "kind": "dd.1@span.2@text",
-          "lastChapter": "",
-          "name": "dt@a@text",
-          "wordCount": "dd.1@span.1@text"
-      },
-      "ruleToc": {
-          "chapterList": "div.chapterlist@div.all@ul@li",
-          "chapterName": "a@text",
-          "chapterUrl": "a@onclick##location\\.href=\\'|\\'$",
-          "nextTocUrl": "div.listpage@span.2@a@href"
-      },
-      "searchUrl": "https://www.fd80s.com/search,{\n\"body\":\"searchkey={{key}}\",\n\"method\":\"POST\",\n\"webView\":true\n}",
-      "weight": 0
-  },
+    "bookSourceGroup": "",
+    "bookSourceName": "www.fd80s.com【笔趣阁】",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.fd80s.com/",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "header": "{\"user-agent\":\"Mozilla/5.0 (Linux; Android 7.1.1; OPPO R9sk) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.111 Mobile Safari/537.36\"}",
+    "lastUpdateTime": 1741239098587,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+        "author": "div.book@div.bookinfo@div.bookdes@p.0@a@text",
+        "coverUrl": "div.book@a.cover@img@src",
+        "intro": "div.bookintro@p@html##.*小说简介：",
+        "kind": "div.book@div.bookinfo@div.bookdes@p.1@text",
+        "lastChapter": "div.book@div.bookinfo@div.bookdes@p.2@a@text",
+        "name": "div.book@div.booktitle@h1@text",
+        "tocUrl": "div.bookbtn@a.1@href",
+        "wordCount": "div.book@div.bookinfo@div.bookdes@p.1@text"
+    },
+    "ruleContent": {
+        "content": "div#chaptercontent@html",
+        "nextContentUrl": "",
+        "title": "div.booktitle@h1@text"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+        "author": "dd.1@a@text",
+        "bookList": "div.container@div.content.pc-pl.pc-pr@dl",
+        "bookUrl": "dt@a@href",
+        "checkKeyWord": "长风江上寒",
+        "coverUrl": "a@img.lazy@src",
+        "intro": "dd.0@text",
+        "kind": "dd.1@span.2@text",
+        "lastChapter": "",
+        "name": "dt@a@text",
+        "wordCount": "dd.1@span.1@text"
+    },
+    "ruleToc": {
+        "chapterList": "div.chapterlist@div.all@ul@li",
+        "chapterName": "a@text",
+        "chapterUrl": "a@onclick##location\\.href=\\'|\\'$",
+        "nextTocUrl": "div.listpage@span.2@a@href"
+    },
+    "searchUrl": "https://www.fd80s.com/search,{\n\"body\":\"searchkey={{key}}\",\n\"method\":\"POST\",\n\"webView\":true\n}",
+    "weight": 0
+    },
   {
       "bookSourceComment": "同站：m.ddtxt8.cc",
       "bookSourceGroup": "",
