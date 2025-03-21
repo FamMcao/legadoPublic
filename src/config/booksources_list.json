@@ -1,0 +1,22 @@
+[
+    {
+        "bookSourceNameCH": "笔趣阁345",
+        "bookSourceJson": "www.biquge345.com.json",
+        "bookSourceUrl": "https://www.biquge345.com"
+    },
+    {
+        "bookSourceNameCH": "笔趣阁",
+        "bookSourceJson": "www.fd80s.com.json",
+        "bookSourceUrl": "https://www.fd80s.com"
+    },
+    {
+        "bookSourceNameCH": "顶点小说",
+        "bookSourceJson": "9ed.qu04.cc.json",
+        "bookSourceUrl": "https://9ed.qu04.cc" 
+    },
+    {
+        "bookSourceNameCH": "蚂蚁文学",
+        "bookSourceJson": "www.mayiwsk.com.json",
+        "bookSourceUrl": "https://www.mayiwsk.com"
+    }
+]
