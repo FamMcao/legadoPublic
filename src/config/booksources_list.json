@@ -18,5 +18,55 @@
         "bookSourceNameCH": "蚂蚁文学",
         "bookSourceJson": "www.mayiwsk.com.json",
         "bookSourceUrl": "https://www.mayiwsk.com"
+    },
+    {
+        "bookSourceNameCH": "笔趣阁",
+        "bookSourceJson": "www.biquge.com.json",
+        "bookSourceUrl": "https://www.biquge.com"
+    },
+    {
+        "bookSourceNameCH": "笔趣阁",
+        "bookSourceJson": "www.biquge.info.json",
+        "bookSourceUrl": "https://www.biquge.info"
+    },
+    {
+        "bookSourceNameCH": "笔趣阁",
+        "bookSourceJson": "www.biquge5200.com.json",
+        "bookSourceUrl": "https://www.biquge5200.com"
+    },
+    {
+        "bookSourceNameCH": "笔趣阁",
+        "bookSourceJson": "www.biquge.com.tw.json",
+        "bookSourceUrl": "https://www.biquge.com.tw"
+    },
+    {
+        "bookSourceNameCH": "笔趣阁",
+        "bookSourceJson": "www.biquge.cm.json",
+        "bookSourceUrl": "https://www.biquge.cm"
+    },
+    {
+        "bookSourceNameCH": "笔趣阁",
+        "bookSourceJson": "www.biquge.tv.json",
+        "bookSourceUrl": "https://www.biquge.tv"
+    },
+    {
+        "bookSourceNameCH": "笔趣阁",
+        "bookSourceJson": "www.biquge.info.json",
+        "bookSourceUrl": "https://www.biquge.info"
+    },
+    {
+        "bookSourceNameCH": "笔趣阁",
+        "bookSourceJson": "www.biquge.info.json",
+        "bookSourceUrl": "https://www.biquge.info"
+    },
+    {
+        "bookSourceNameCH": "笔趣阁",
+        "bookSourceJson": "www.biquge.info.json",
+        "bookSourceUrl": "https://www.biquge.info"
+    },
+    {
+        "bookSourceNameCH": "笔趣阁",
+        "bookSourceJson": "www.biquge.info.json",
+        "bookSourceUrl": "https://www.biquge.info"
     }
 ]
