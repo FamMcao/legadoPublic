@@ -13,40 +13,40 @@
     "lastUpdateTime": 1742207959067,
     "respondTime": 7156,
     "ruleBookInfo": {
-      "author": "div#maininfo@div#info@p.0@text",
-      "coverUrl": "div#sidebar@div#fmimg@img@src",
-      "intro": "div#maininfo@div#intro@p@text",
-      "kind": "div#maininfo@div#info@p.2@text",
-      "lastChapter": "div#maininfo@div#info@p.3@a@text",
-      "name": "div#maininfo@div#info@h1@text",
-      "tocUrl": ""
+        "author": "div#maininfo@div#info@p.0@text",
+        "coverUrl": "div#sidebar@div#fmimg@img@src",
+        "intro": "div#maininfo@div#intro@p@text",
+        "kind": "div#maininfo@div#info@p.2@text",
+        "lastChapter": "div#maininfo@div#info@p.3@a@text",
+        "name": "div#maininfo@div#info@h1@text",
+        "tocUrl": ""
     },
     "ruleContent": {
-      "content": "div#content@html",
-      "replaceRegex": "##最新网址：.*| +[^ ]+小说5200| +[^ ]+贴吧| +[^ ]+\\《\\》|\\{宜搜小说.*",
-      "title": "div.bookname@h1@text"
+        "content": "div#content@html",
+        "replaceRegex": "##最新网址：.*| +[^ ]+小说5200| +[^ ]+贴吧| +[^ ]+\\《\\》|\\{宜搜小说.*",
+        "title": "div.bookname@h1@text"
     },
     "ruleExplore": {
-      "coverUrl": "",
-      "name": ""
+        "coverUrl": "",
+        "name": ""
     },
     "ruleSearch": {
-      "author": "td.odd.1@text",
-      "bookList": "div#main@div#content@table.grid@tbody.0@tr#nr",
-      "bookUrl": "td.odd.0@a@href",
-      "checkKeyWord": "皇兄何故造反",
-      "coverUrl": "a.0@href##.+\\D((\\d+)\\d{3})\\D##/files/article/image/$2/$1/$1s.jpg###",
-      "intro": "",
-      "kind": "td.5:4@text",
-      "lastChapter": "td.even@a@text",
-      "name": "td.odd.0@text",
-      "wordCount": "td.3@text"
+        "author": "td.odd.1@text",
+        "bookList": "div#main@div#content@table.grid@tbody.0@tr#nr",
+        "bookUrl": "td.odd.0@a@href",
+        "checkKeyWord": "皇兄何故造反",
+        "coverUrl": "a.0@href##.+\\D((\\d+)\\d{3})\\D##/files/article/image/$2/$1/$1s.jpg###",
+        "intro": "",
+        "kind": "td.5:4@text",
+        "lastChapter": "td.even@a@text",
+        "name": "td.odd.0@text",
+        "wordCount": "td.3@text"
     },
     "ruleToc": {
-      "chapterList": "div.box_con@div#list@dl.0@dt:nth-of-type(2)~dd@a",
-      "chapterName": "@text",
-      "chapterUrl": "@href"
+        "chapterList": "div.box_con@div#list@dl.0@dt:nth-of-type(2)~dd@a",
+        "chapterName": "@text",
+        "chapterUrl": "@href"
     },
     "searchUrl": "https://www.mayiwsk.com/modules/article/search.php,{\n\"method\":\"post\",\n\"body\":\"searchkey={{key}}&searchtype=articlename\"\n}",
     "weight": 0
-  }
+}

@@ -1,0 +1,46 @@
+{
+    "bookSourceName": "www.txtwl.com【网络小说网】",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.txtwl.com/",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": true,
+    "header": "{\"user-agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0\"}",
+    "lastUpdateTime": 0,
+    "respondTime": 180000,
+    "ruleBookInfo": {
+        "author": "div.book-info@h1@a@text",
+        "coverUrl": "div.book-img[0]@a@img@src",
+        "intro": "div.book-info@p.intro.show@text",
+        "kind": "div.book-info@p.tag-box@span@i[1]@text",
+        "lastChapter": "div.volume-wrap[0]@div.volume@ul.cf@li[0]@a@text",
+        "name": "div.book-info@h1@em@text",
+        "wordCount": "div.book-info@p.total@span[0]@text##万##万字"
+    },
+    "ruleContent": {
+        "content": "div.read-content.j_readContent@div.ywskythunderfont@html",
+        "replaceRegex": "##网络小说网www.*",
+        "sourceRegex": "",
+        "title": "h1.j_chapterName@text"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+        "author": "div.book-info@h4@a@text",
+        "bookList": "div.right-book-list@ul@li",
+        "bookUrl": "div.book-info@h3@a@href",
+        "checkKeyWord": "大魏芳华",
+        "coverUrl": "div.book-img>a>img@src",
+        "intro": "div.book-info@p.intro@text",
+        "kind": "div.book-info@p.tag@span[0:1]@text",
+        "name": "div.book-info@h3@a@text",
+        "wordCount": "div.book-info@p.tag@span[2]@text##万##万字"
+    },
+    "ruleToc": {
+        "chapterList": "<js>\nlet bookId = baseUrl.match(/detail_(\\d+)\\.html/)[1];\nlet postBody = JSON.stringify({\"book_id\": bookId});\nlet headers = {\"Content-Type\": \"application/json\"};\nlet response = java.post(\"https://www.txtwl.com/api/viewDetailMore\", postBody, headers);\nlet jsonData = JSON.parse(response.body());\nlet listItemArray = [];\nfor (let { id, title } of jsonData.data) {\n  let href = `/article_${bookId}_${id}.html`;\n  let link = `<a href=\"${href}\">${title}</a>`;\n  listItemArray.push(`<li>${link}</li>`);\n};\nlet listItemsString = listItemArray.join('');\nlet newResult = `<ul id=\"detail_list\">${listItemsString}</ul>`;\nresult += newResult;\n</js>\nul#detail_list>li",
+        "chapterName": "a@text",
+        "chapterUrl": "a@href"
+    },
+    "searchUrl": "https://www.txtwl.com/list_f_f_f_f_f_1.html?title={{key}}",
+    "weight": 0
+}

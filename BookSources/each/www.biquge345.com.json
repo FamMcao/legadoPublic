@@ -4,40 +4,40 @@
     "bookSourceUrl": "https://www.biquge345.com/",
     "concurrentRate": "1/1000",
     "customOrder": 0,
-    "enabled": false,
+    "enabled": true,
     "enabledCookieJar": true,
     "enabledExplore": true,
     "header": "{\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36\"}",
     "lastUpdateTime": 1741239033198,
     "respondTime": 180000,
     "ruleBookInfo": {
-      "author": "span.x1>a@text",
-      "coverUrl": "div.zhutu>img@src",
-      "intro": "div.x3@text",
-      "kind": "span.x1@text",
-      "lastChapter": "span.x2>a@text",
-      "name": "div.right_border>h1@text"
+        "author": "span.x1>a@text",
+        "coverUrl": "div.zhutu>img@src",
+        "intro": "div.x3@text",
+        "kind": "span.x1@text",
+        "lastChapter": "span.x2>a@text",
+        "name": "div.right_border>h1@text"
     },
     "ruleContent": {
-      "content": "#txt@textNodes",
-      "replaceRegex": "##(&?\\w+;|\\(本章完\\)|\\?.*最新章节.*完整章节』|\\(\\))##"
+        "content": "#txt@textNodes",
+        "replaceRegex": "##(&?\\w+;|\\(本章完\\)|\\?.*最新章节.*完整章节』|\\(\\))##"
     },
     "ruleExplore": {},
     "ruleSearch": {
-      "author": "span.zuo>a@text",
-      "bookList": "ul.search>li:not(li.fen)",
-      "bookUrl": "span.name>a@href",
-      "checkKeyWord": "秦始皇获得大学生召唤系统后",
-      "coverUrl": "",
-      "kind": "span.lei>a@text&&span.time@text##(\\[|\\])##",
-      "lastChapter": "span.jie>a@text",
-      "name": "span.name>a@text"
+        "author": "span.zuo>a@text",
+        "bookList": "ul.search>li:not(li.fen)",
+        "bookUrl": "span.name>a@href",
+        "checkKeyWord": "剑来",
+        "coverUrl": "",
+        "kind": "span.lei>a@text&&span.time@text##(\\[|\\])##",
+        "lastChapter": "span.jie>a@text",
+        "name": "span.name>a@text"
     },
     "ruleToc": {
-      "chapterList": "ul.info>li",
-      "chapterName": "a@text",
-      "chapterUrl": "a@href"
+        "chapterList": "ul.info>li",
+        "chapterName": "a@text",
+        "chapterUrl": "a@href"
     },
     "searchUrl": "<js>cookie.removeCookie(baseUrl)</js>\n/s.php, {\n \"method\": \"POST\",\n \"body\": \"type=articlename&s={{key}}&submit=\",\n \"headers\": {\"User-Agent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36\"}\n}",
     "weight": 0
-  }
+}
